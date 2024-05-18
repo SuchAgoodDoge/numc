@@ -1,4 +1,5 @@
-class lvec {
+#include <iostream>
+class lvec{
     private:
         double x[4];
     public:
@@ -16,5 +17,16 @@ class lvec {
             x[3] = x3;
         }
 
+        double mag();
+        double operator[](size_t i){
+            if (i > 3 || i<0){
+                std::cerr<<"Out of bounds";
+                return 0.0;
+            }
+
+            else{
+                return x[i];
+            }
+        }
 
 };

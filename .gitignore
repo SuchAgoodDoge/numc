@@ -1,2 +1,3 @@
 *.o
 numc
+*.gch
