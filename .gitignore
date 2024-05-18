@@ -1,3 +1,4 @@
 *.o
 numc
 *.gch
+.vscode/settings.json
