@@ -42,3 +42,5 @@ void lvec::print(){
     }
     std::cout<<x[3]<<"}"<<std::endl;
 }
+
+
