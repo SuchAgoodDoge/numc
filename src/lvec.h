@@ -17,16 +17,21 @@ class lvec{
             x[3] = x3;
         }
 
+        void print();
+        void stream(std::ostream& os) const;
+
         double mag();
-        double operator[](size_t i){
-            if (i > 3 || i<0){
-                std::cerr<<"Out of bounds";
-                return 0.0;
+        double& operator[](size_t i);
+        const double& operator[](size_t i) const;
+
+        // x by a constant
+        lvec operator*(double c){
+            lvec new_vec;
+            for (size_t i; i<4; i++){
+                new_vec[i] = x[i] * c;
             }
 
-            else{
-                return x[i];
-            }
+            return new_vec;
         }
 
 };
