@@ -1,4 +1,4 @@
-#include "4vec.h"
+#include "lvec.h"
 
 // could be a virtual class
 class Particle{
