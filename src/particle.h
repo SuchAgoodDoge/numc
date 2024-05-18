@@ -4,27 +4,32 @@
 class Particle{
   protected:
     double m;
-    4vev p;
-    4vec x;
+    lvec p;
+    lvec x;
 
   public:
-    Particle Particle(double m;){
+    Particle(){
+      m = 0;
+      p = lvec(0, 0, 0, 0);
+      x = lvec(0, 0, 0, 0);
+    }
+    Particle(double m){
       this->m = m;
-      p = {m, 0, 0, 0};
-      x = {0, 0, 0, 0};
+      p = lvec(0, 0, 0, 0);
+      x = lvec(0, 0, 0, 0);
     }
 
-    void set_momentum(4vec p){
+    void set_momentum(lvec p){
       this->p = p;
     }
     
-    4vec p4(){
+    lvec p4(){
       return p;
     }
 
-    4vec x4(){
+    lvec x4(){
       return x;
     }
 
     ~Particle(){};
-}
+};
