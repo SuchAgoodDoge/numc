@@ -38,6 +38,6 @@ class lvec{
         // 1) takes particle -> boosts to frame of particle
         // 2) betax betay betaz
         // Do i want this as a matrix * vector operation instead??????
-        //void boost(double bx, double by, double bz);
+        void boost(double bx, double by, double bz);
 
 };
