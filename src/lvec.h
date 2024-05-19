@@ -1,3 +1,7 @@
+#ifndef LVEC_H
+#define LVEC_H
+
+
 #include <iostream>
 class lvec{
     private:
@@ -41,3 +45,6 @@ class lvec{
 namespace math{
     double sqrt(double x);
 }
+
+
+#endif

@@ -2,6 +2,7 @@
 #include <sstream>
 #include <cmath>
 
+// helper functions
 namespace math{
     double sqrt(double x){
         return std::pow(x, 0.5);

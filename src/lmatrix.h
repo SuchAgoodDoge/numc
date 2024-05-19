@@ -1,6 +1,5 @@
 #ifndef LMATRIX_H
 #define LMATRIX_H
-#endif
 
 #include <iostream>
 # include "lvec.h"
@@ -19,6 +18,11 @@ class lmatrix {
                 }
             }
         }
+
+        lmatrix(double m11, double m12, double m13, double m14,
+                double m21, double m22, double m23, double m24,
+                double m31, double m32, double m33, double m34,
+                double m41, double m42, double m43, double m44);
 
         double& operator()(size_t i, size_t j){
             if (i > 3 || j > 3){
@@ -41,3 +45,6 @@ class lmatrix {
         }
 
 };
+
+
+#endif
