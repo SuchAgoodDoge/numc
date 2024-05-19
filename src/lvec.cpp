@@ -1,11 +1,11 @@
 #include "lvec.h"
 #include <sstream>
-#include <cmath.h>
+#include <cmath>
 
 namespace math{
-double math::sqrt(double x){
-    return std::pow(x, 0.5);
-}
+    double sqrt(double x){
+        return std::pow(x, 0.5);
+    }
 }
 
 double lvec::mag(){
@@ -50,12 +50,3 @@ void lvec::print(){
 }
 
 
-void lvec::boost(double betax, double betay, double betaz){
-    double beta = math::sqrt(betax*betax + betay*betay + betaz*betaz);
-    double gamma = 1./math::sqrt(1. - beta**2);
-
-    
-
-
-
-}

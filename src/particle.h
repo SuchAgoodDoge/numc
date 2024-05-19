@@ -32,4 +32,14 @@ class Particle{
     }
 
     ~Particle(){};
+
+
+  // ideally want a few overloads of this
+  // 1) takes particle -> boosts to frame of particle
+  // 2) betax betay betaz
+  // Do i want this as a matrix * vector operation instead??????
+  void boost(double betax, double betay, double betaz){
+    double beta = math::sqrt(betax*betax + betay*betay + betaz*betaz);
+    double gamma = 1./math::sqrt(1. - beta*beta);
+  }
 };

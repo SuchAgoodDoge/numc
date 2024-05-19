@@ -34,10 +34,10 @@ class lvec{
             return new_vec;
         }
 
-        // ideally want a few overloads of this
-        // 1) takes particle -> boosts to frame of particle
-        // 2) betax betay betaz
-        // Do i want this as a matrix * vector operation instead??????
-        void boost(double bx, double by, double bz);
-
 };
+
+
+// helper maths functions
+namespace math{
+    double sqrt(double x);
+}

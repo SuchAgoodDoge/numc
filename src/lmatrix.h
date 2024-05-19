@@ -3,7 +3,7 @@
 #endif
 
 #include <iostream>
-
+# include "lvec.h"
 
 // Path: src/lmatrix.cpp
 
@@ -28,6 +28,16 @@ class lmatrix {
             else{
                 return m[i][j];
             }
+        }
+
+        lvec operator*(lvec v){
+            lvec new_vec;
+            for (size_t i=0; i<4; i++){
+                for (size_t j=0; j<4; j++){
+                    new_vec[i] += m[i][j] * v[j];
+                }
+            }
+            return new_vec;
         }
 
 };
