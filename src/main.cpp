@@ -7,7 +7,7 @@
 int main(){
   Particle e{0.511};
   e.p4().print();
-  e.boost(0.9, 0.8, 0.7);
+  e.boost(-0.9999, 0.0, 0.0);
   e.p4().print();
   std::cout<<"\n"<<e.p4().mag()<<std::endl;
   return 0;

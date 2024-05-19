@@ -44,6 +44,9 @@ class lmatrix {
             return new_vec;
         }
 
+
+        void print();
+
 };
 
 

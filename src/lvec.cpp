@@ -10,7 +10,7 @@ namespace math{
 }
 
 double lvec::mag(){
-    return math::sqrt(x[0] * x[0]) - ((x[1]*x[1]) + (x[2]*x[2]) + (x[3]*x[3]));
+    return math::sqrt((x[0] * x[0]) - ((x[1]*x[1]) + (x[2]*x[2]) + (x[3]*x[3])));
 }
 
 // this one returns it

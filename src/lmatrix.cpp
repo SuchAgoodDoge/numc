@@ -24,3 +24,21 @@ lmatrix::lmatrix(double m11, double m12, double m13, double m14,
     m[3][2] = m43;
     m[3][3] = m44;
 }
+
+
+void lmatrix::print(){
+    std::cout<<"{";
+    for (size_t i=0; i<4; i++){
+        for (size_t j=0; j<4; j++){
+            if (i!=3 && j == 3){
+                std::cout<<m[i][j]<<"\n";
+            } else if (i==3 && j==3){
+                std::cout<<m[i][j]<<"}\n"<<std::endl;
+            }
+            else{
+                std::cout<<m[i][j]<<", ";
+            }
+        }
+    }
+
+}

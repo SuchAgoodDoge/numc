@@ -46,7 +46,13 @@ class Particle{
   void boost(double betax, double betay, double betaz){
     // setup matrix for boost
     double beta = math::sqrt(betax*betax + betay*betay + betaz*betaz);
+    if (beta > 1) {
+      std::cerr<<"Invalid kinematics in particle::boost; beta must be less than 1";
+      return;
+    }
+    std::cout<<"beta: "<<beta<<std::endl;
     double gamma = 1./math::sqrt(1. - beta*beta);
+    std::cout<<"gamma: "<<gamma<<std::endl;
 
     double m11 = gamma;
     double m12 = -gamma*betax;
@@ -69,7 +75,7 @@ class Particle{
     double m44 = 1 + (gamma - 1)*betaz*betaz/(beta*beta);
 
     lmatrix boost_matrix(m11, m12, m13, m14, m21, m22, m23, m24, m31, m32, m33, m34, m41, m42, m43, m44);
-    
+    boost_matrix.print();
     // boost the particle
     x = boost_matrix * x;
     p = boost_matrix * p;
