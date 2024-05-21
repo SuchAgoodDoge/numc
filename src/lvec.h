@@ -38,6 +38,10 @@ class lvec{
             return new_vec;
         }
 
+        void rotate_x(double theta);
+        void rotate_y(double theta);
+        void rotate_z(double theta);
+
 };
 
 

@@ -51,3 +51,40 @@ void lvec::print(){
 }
 
 
+
+// Need to check these!
+void lvec::rotate_x(double theta){
+    double x0 = x[0];
+    double x1 = x[1];
+    double x2 = x[2];
+    double x3 = x[3];
+
+    x[0] = x0;
+    x[1] = x1 * std::cos(theta) - x2 * std::sin(theta);
+    x[2] = x1 * std::sin(theta) + x2 * std::cos(theta);
+    x[3] = x3;
+}
+
+void lvec::rotate_y(double theta){
+    double x0 = x[0];
+    double x1 = x[1];
+    double x2 = x[2];
+    double x3 = x[3];
+
+    x[0] = x0 * std::cos(theta) + x2 * std::sin(theta);
+    x[1] = x1;
+    x[2] = -x0 * std::sin(theta) + x2 * std::cos(theta);
+    x[3] = x3;
+}
+
+void lvec::rotate_z(double theta){
+    double x0 = x[0];
+    double x1 = x[1];
+    double x2 = x[2];
+    double x3 = x[3];
+
+    x[0] = x0 * std::cos(theta) - x1 * std::sin(theta);
+    x[1] = x0 * std::sin(theta) + x1 * std::cos(theta);
+    x[2] = x2;
+    x[3] = x3;
+}
