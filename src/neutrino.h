@@ -3,7 +3,7 @@
 
 #include "particle.h"
 
-class Neutrino : Particle{
+class Neutrino : public Particle{
     private:
         // e, mu, tau
         std::string flavour;
@@ -11,6 +11,11 @@ class Neutrino : Particle{
     public:
         Neutrino(char flavour){
             this->flavour = flavour;
+        }
+
+        Neutrino(char flavour, lvec p4){
+            this->flavour = flavour;
+            this->set_momentum(p4);
         }
 };
 

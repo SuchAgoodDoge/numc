@@ -10,6 +10,8 @@ Would be fun...
 // PHYSICAL CONSTANTS
 double c {2.99792458e8}; // m/s
 
+double pi {3.14159265359};
+
 // PMNS MATRIX PARAMS
 // https://pdg.lbl.gov/index-2022.html
 // dmsq in ev^2

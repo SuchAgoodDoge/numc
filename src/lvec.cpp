@@ -53,6 +53,8 @@ void lvec::print(){
 
 
 // Need to check these!
+// none of these are right! x0 should be energy!
+// impliment 3vec momentum instead?
 void lvec::rotate_x(double theta){
     double x0 = x[0];
     double x1 = x[1];
